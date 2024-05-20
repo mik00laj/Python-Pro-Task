@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://kit.fontawesome.com/1946f486ca.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav__box">
+                <div class="nav__items">
+                    <a href="main_page_quiz.html" class="nav__item">STRONA GŁÓWNA</a>
+                    <a href="quiz.html" class="nav__item">QUIZ</a>
+                    <a href="login.html" class="nav__item">WYLOGUJ SIĘ</a>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="weather-app">
+            <div class="top">
+                <h1>weather app</h1>
+                <div class="main-info">
+                    <div>
+                        <h3 class="city-name"></h3>
+                        <input type="text" placeholder="Wpisz nazwę miasta..."><button>Wyślij</button>
+                        <p class="warning"></p>
+                    </div>
+                    <div class=" temperature"></div>
+                <img src="{{ url_for('static', filename='img/unknown.png') }}" alt="Obrazek przedstawiający pogodę" class="photo">
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="headings">
+                    <div class="box">Dzień</div>
+                    <div class="box">Prognoza</div>
+                    <div class="box">Temp. dzień</div>
+                    <div class="box">Temp. noc</div>
+                </div>
+                <div class="weather-info">
+                    <div class="day box">x</div>
+                    <div class="weather box">x</div>
+                    <div class="temperature--day box">x</div>
+                    <div class="temperature--night box">x</div>
+                </div>
+                <div class="weather-info">
+                    <div class="day2 box">x</div>
+                    <div class="weather2 box">x</div>
+                    <div class="temperature--day2 box">x</div>
+                    <div class="temperature--night2 box">x</div>
+                </div>
+                <div class="weather-info">
+                    <div class="day3 box">x</div>
+                    <div class="weather3 box">x</div>
+                    <div class="temperature--day3 box">x</div>
+                    <div class="temperature--night3 box">x</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <footer class="footer">
+        <p class="footer__bottom-text">&copy;</span> Mikołaj Bańkowski 2024</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="/static/js/script.js"></script>
+
+</html>

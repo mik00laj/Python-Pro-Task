@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizApp</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://kit.fontawesome.com/1946f486ca.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav__box">
+                <div class="nav__items">
+                    <a href="main_page_quiz.html" class="nav__item">STRONA GŁÓWNA</a>
+                    <a href="quiz.html" class="nav__item">QUIZ</a>
+                    <a href="login.html" class="nav__item">WYLOGUJ SIĘ</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="quiz-app">
+            <div class="top">
+                <h1>Quiz</h1>
+                <div class="quiz-box">
+                    <h2 class="question-header">PYTANIE</h2>
+                    <p class="question-description">Ładowanie pytania...</p>
+                    <div class="question-box">
+                        <div class="questions">
+                            <div class="question questionA"></div>
+                            <div class="question questionC"></div>
+                        </div>
+                        <div class="questions">
+                            <div class="question questionB"></div>
+                            <div class="question questionD"></div>
+                        </div>
+                    </div>
+                    <input type="text" class="answer-input" placeholder="Podaj odpowiedź">
+                    <button class="quiz-check">Sprawdź odpowiedź</button>
+                    <div class="quiz-table">
+                        <div class="quiz-table">
+                            <h3>TABELA WYNIKÓW</h3>
+                            {% for user in users %}
+                            <div class="quiz-player">
+                                <p class="username {% if session.get('username') == user.username %}logged{% endif %}">{{ user.username }}</p>
+                                <p class="{{ user.username }}-points {% if session.get('username') == user.username %}logged-points{% endif %}" >{{ user.points }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p class="footer__bottom-text">&copy; Mikołaj Bańkowski 2024</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.21.4/dist/axios.min.js"></script>
+    <script src="/static/js/quiz.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://kit.fontawesome.com/1946f486ca.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav__box">
+                <div class="nav__items">
+                    <a href="index.html" class="nav__item">STRONA GŁÓWNA</a>
+                    <a href="register.html" class="nav__item">REJESTRACJA</a>
+                    <a href="login.html" class="nav__item">LOGOWANIE</a>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="weather-app">
+            <div class="top">
+                <h1>Logowanie</h1>
+                <form method="POST" action="/login.html">
+                <div class="login-box">
+
+                        <p class="username-title">Nazwa użytkownika</p>
+                        <input type="text" name="username" placeholder="Nazwa użytkownika" class="username">
+                        <p class="password-title">Hasło</p>
+                        <input type="password" name="password" placeholder="Wpisz hasło" class="password password1">
+                        <button type="submit" class="login-button">Zaloguj się</button>
+
+                </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <footer class="footer">
+        <p class="footer__bottom-text">&copy;</span> Mikołaj Bańkowski 2024</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="/static/js/login.js"></script>
+
+</html>
